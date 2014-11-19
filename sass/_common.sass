@@ -47,120 +47,427 @@
 // p
 // 	+jpg(bla)
 
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,700,400&subset=cyrillic-ext,latin")
+@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,400&subset=latin,cyrillic-ext")
 
+=rob
+	font-family: "Roboto", sans-serif
+
+=robs
+	font-family: "Roboto Slab", serif
+
+//boby
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
+	color: #1e1e1e
+	font-size: 14px 
+	font-weight: 300
+	line-height: 1.6
+	+rob
 
+a
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+p
+	margin-top: 25px
+	line-height: 1.6
 
 // common blocks      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -80px
+
+//container
+.container
+	margin: 0 auto
+	width: 1024px
+
+//header
+.header
+	height: 67px
+	+clr
+
+
+//logo
+.logo
+	float: left
+	+s(logo)
+
+//nav
+.nav
+	float: right
+	height: 67px
+	line-height: 67px
+	li
+		margin-left: 35px
+		vertical-align: middle
+		display: inline-block
+		a
+			color: #fff
+			text-transform: uppercase
+			&:hover
+				text-decoration: none
+				border-bottom: 3px solid #ea4e3c
+			&:active
+				color: #babfc2
+				border: none
+
+//toptitle
+.toptitle
+	position: relative
+	margin-top: 185px
+	color: #fff
+	font-size: 76px
+	font-weight: 300
+	letter-spacing: 6px
+	text-align: center
+	text-transform: uppercase
+	line-height: 1
+	+robs
+	&:before
+		position: absolute
+		content: ''
+		bottom: -15px
+		left: 50%
+		margin-left: -567px/2
+		height: 1px
+		width: 567px
+		background: #ea4e3c
+	.toptitle__bold
+		font-weight: 700
+
+//btnscrol
+.btnscrol
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: 77px/2
+	width: 77px
+	height: 51px
+	background: #fff
+	&:hover
+		&:before
+			+opacity(0.5)
+	&:active
+		&:before
+			+s(arrow-press)
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		margin: -10px 0 0 -22px
+		+s(arr)
+
+//title
+.title
+	margin-bottom: 45px
+	color: #ea4e3c
+	font-size: 76px
+	font-weight: 400
+	letter-spacing: 6px
+	text-transform: uppercase
+	text-align: center
+	line-height: 1
+	+robs
+	&.title_line
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			bottom: -22px
+			left: 50%
+			margin-left: -568px/2
+			height: 1px
+			width: 568px
+			background: #dbdfe2
+	&.title_white
+		color: #fff
+.title-red
+	color: #ea4e3c
+	font-size: 18px
+	font-weight: 700
+	line-height: 1.2
+	text-transform: uppercase
+	+robs
+
+//ico
+.ico
+	display: inline-block
+	&.ico_delta
+		+s(deltapay)
+	&.ico_finam
+		+s(finam)
+	&.ico_paytravel
+		+s(paytravel)
+	&.ico_eco
+		+s(ico1)
+	&.ico_profit
+		+s(ico2)
+	&.ico_net
+		+s(ico3)
+	&.ico_time
+		+s(ico4)
+	&.ico_integration
+		+s(ico5)
+	&.ico_lock
+		+s(ico6)
+
+//article
+.article
+	padding: 0 50px
+	+box
+	.article__row
+		+clr
+	.article__left
+		float: left
+		padding-right: 90px
+	.article__right
+		float: right
+		padding-right: 40px
+	.article__left, .article__right
+		width: 50%
+		+box
+	.title-red
+		margin-top: 25px
+		padding-right: 40px
+		font-size: 24px
+		text-transform: none
+		+box
+	.title
+		text-align: left
+	.article__textbold
+		margin-top: 25px
+		padding-right: 40px
+		font-weight: 700
+		+rob
+	.partners
+		padding-top: 25px
+		.ico
+			margin-left: 50px
+			vertical-align: top
+			&:first-child
+				margin-top: 36px
+				margin-left: 0
+
+//paytravel
+.paytravel
+	margin-top: 60px
+	text-align: center
+
+//offer
+.offer
+	.offer__text
+		line-height: 1.2
+		font-size: 20px
+		font-weight: 400
+		+rob
+		&.offer__text_sm
+			font-size: 14px
+			line-height: 1.4
+			font-weight: 300
+			p
+				margin-top: 5px
+	.offer__textbold
+		margin-top: 30px
+		font-weight: 700
+	.offer__row
+		margin: 52px 0
+	.offer__col
+		padding: 30px 20px 25px
+		width: 302px
+		height: 544px
+		+border-radius(8px)
+		background-color: #fff
+		+box-shadow(0 2px 2px rgba(0,0,11,.15))
+	.offer__top
+		height: 142px
+		text-align: center
+	.offer__img
+		width: 120px
+		height: 120px
+		overflow: hidden
+		border: 1px solid #f3f3f3
+		+border-radius(50%)
+		display: inline-block
+		img
+			margin: 0 auto
+			display: block
+		&.offer__img_1
+			img
+				margin-top: 10px
+		&.offer__img_2
+			img
+				margin-top: 22px
+		&.offer__img_3
+			img
+				margin: 8px 0px 0 -1px
+	.title-red
+		font-size: 16px
+		letter-spacing: 1px
+
+//row>col
+.row
+	+clr
+	.col
+		float: left
+		margin-left: 59px
+		width: 302px
+		text-align: left
+		+box
+		&:first-child
+			margin-left: 0
+	.col__text
+		p
+			&:first-child
+				margin-top: 10px
+
+//col__ico
+.col__ico
+	height: 100px
+	line-height: 100px
+	.ico
+		vertical-align: middle
+
+//contacts
+.contacts
+	.contacts__wrap
+		+clr
+	.title
+		font-weight: 700
+	.contacts__text
+		margin-bottom: 70px
+		text-align: center
+	.contacts__map
+		padding-left: 24px
+		width: 555px
+		+box
+	.map
+		margin-top: 30px
+		width: 414px
+		height: 466px
+		.ymaps-2-1-17-copyright__link, .ymaps-2-1-17-copyright__logo, .ymaps-2-1-17-copyright__content
+			display: none
+	.contacts__map, .form
+		float: left
+	.contacts__row
+		margin-top: 3px
+		&:first-child
+			margin-top: 0
+	.contacts__region, .contacts__phone
+		position: relative
+		color: #ea4e3c
+		line-height: 1
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 700
+		display: inline-block
+		+robs
+		&:before
+			position: absolute
+			content: ''
+			left: -30px
+			bottom: -3px
+	.contacts__region
+		&:before
+			+s(marker)
+	.contacts__phone
+		margin-left: 70px
+		&:before
+			+s(phone)
+//form
+.form
+	width: 417px
+	.form__field
+		margin-bottom: 22px
+		font-size: 0
+		img
+			width: 100%
+			display: block
+	.form__col
+		margin-left: 17px
+		width: 200px
+		vertical-align: top
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	.form__submit
+		float: left
+		width: 200px
+		height: 48px
+		color: #fff
+		font-size: 18px
+		font-weight: 700
+		text-align: center
+		background: #ea4e3c
+		+robs
+		+box
+		&:hover
+			+opacity(0.5)
+		&:active
+			background: #c5c5c5
+		&.js-submit
+			color: #ea4e3c
+			background: #fff
+			border: 3px solid #ea4e3c
+			.form__sub-1
+				display: none
+			.form__sub-2
+				display: block
+	.form__sub-2
+		display: none
+	.form__message
+		float: left
+		margin-left: 10px
+		color: #ea4e3c
+		height: 48px
+		line-height: 48px
+		font-size: 12px
+		font-weight: 700
+		vertical-align: top
+		display: none
+		&.form__message_red
+			color: #459824
+	input, textarea
+		width: 100%
+		padding: 15px 10px
+		height: 48px
+		color: #181818
+		font-weight: 300
+		font-size: 18px
+		border: 1px solid #e5e5e5
+		display: block
+		+rob
+		+box
+		&:focus
+			border-color: #a4a4a4
+			+placeholder
+				font-size: 0
+		&.error
+			color: #ea4e3c
+			border-color: #ea4e3c !important
+			+placeholder-color(#ea4e3c)
+	textarea
+		height: 188px
+		resize: none
+
+.captcha
+	border: 1px solid #dedede
+
+//footer
+.footer, .push
+	height: 80px
+.footer
+	margin: 0 auto
+	width: 1024px
+	color: #181818
+	font-size: 16px
+	line-height: 80px
+	text-align: center
+	border-top: 3px solid #f2f2f2
+	font-weight: 400
+	+box

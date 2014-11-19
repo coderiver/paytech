@@ -1,9 +1,26 @@
 // default layout
 .l
+	padding: 80px 0 70px
+	+box
 	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+	&.l_top
+		position: relative
+		padding-top: 18px
+		height: 767px
+		background: url(../img/bg.png) no-repeat 0 0, #002857
+		background-size: cover
+	&.l_gray
+		text-align: center
+		background: #f4f4f4
+	&.l_blue
+		color: #fff
+		background: #002857
+		.row
+			margin-top: 40px
+			&:first-child
+				margin-top: 0
+		.col
+			margin-left: 54px
+			width: 305px
+			&:first-child
+				margin-left: 0
