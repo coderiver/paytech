@@ -71,7 +71,7 @@ head.ready(function() {
 	});
 
 	// scrollTop
-	$(".js-scroll").click(function (){
+	$(".js-scroll, .nav a").click(function (){
 		var page = $(this).attr("href");
 
 		$('html, body').animate({
