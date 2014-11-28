@@ -97,7 +97,22 @@ p
 //logo
 .logo
 	float: left
-	+s(logo)
+	position: relative
+	padding-left: 75px
+	height: 65px
+	line-height: 65px
+	font-size: 30px
+	font-weight: 700
+	color: #fff
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		+svg(logo, 65, 65)
 
 //nav
 .nav
